@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halted Stocks</title>
+</head>
+<body>
+    <h1>Halted Stocks</h1>
+    <table border="1">
+        <tr>
+            <th>Symbol</th>
+            <th>Company</th>
+            <th>Reason</th>
+            <th>Time</th>
+        </tr>
+        {% for stock in halted_stocks %}
+        <tr>
+            <td>{{ stock.Symbol }}</td>
+            <td>{{ stock.Company }}</td>
+            <td>{{ stock.Reason }}</td>
+            <td>{{ stock.Time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
